@@ -2,22 +2,16 @@ package com.kelin.okkeyboard
 
 import android.app.Activity
 import android.content.Context
-import android.graphics.Point
-import android.os.Build
 import android.support.annotation.IdRes
 import android.support.v4.view.ScrollingView
 import android.support.v7.widget.AppCompatEditText
 import android.util.AttributeSet
 import android.view.*
 import android.widget.*
-import androidx.annotation.IdRes
-import androidx.appcompat.widget.AppCompatEditText
-import androidx.core.view.ScrollingView
 import com.kelin.okkeyboard.handlers.CarKeyboardHandler
 import com.kelin.okkeyboard.handlers.IdCardKeyboardHandler
 import com.kelin.okkeyboard.handlers.NumberKeyboardHandler
 import kotlinx.android.synthetic.main.keyboard_layout_car_number.view.*
-
 
 /**
  * **描述:** 自动使用自定义键盘的文本编辑框。
@@ -93,7 +87,6 @@ class KeyboardEditText @JvmOverloads constructor(context: Context, attrs: Attrib
             when (root) {
                 is FrameLayout -> {
                     root.addView(it, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { gravity = Gravity.BOTTOM })
-                    (it.layoutParams as? ViewGroup.MarginLayoutParams)?.bottomMargin = getNavigationBarHeight()
                 }
                 is RelativeLayout -> {
                     root.addView(it, RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply {
@@ -101,6 +94,7 @@ class KeyboardEditText @JvmOverloads constructor(context: Context, attrs: Attrib
                     })
                 }
                 is LinearLayout -> {
+                    root.addView(View(context), LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1F))
                     root.addView(it)
                 }
                 else -> {
@@ -111,36 +105,13 @@ class KeyboardEditText @JvmOverloads constructor(context: Context, attrs: Attrib
         }
     }
 
-    private fun getNavigationBarHeight(): Int {
-        if (!isNavigationBarShow()) {
-            return 0
-        }
-        //获取NavigationBar的高度
-        return resources.getDimensionPixelSize(
-            resources.getIdentifier("navigation_bar_height", "dimen", "android")
-        )
-    }
-
-    private fun isNavigationBarShow(): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            val display = (context as Activity).windowManager.defaultDisplay
-            val size = Point()
-            val realSize = Point()
-            display.getSize(size)
-            display.getRealSize(realSize)
-            realSize.y != size.y
-        } else {
-            val menu = ViewConfiguration.get(context).hasPermanentMenuKey()
-            val back = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK)
-            !(menu || back)
-        }
-    }
-
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        if (editType != EDIT_TYPE_NULL) {
-            helper = KeyboardHelper.init(context as Activity, this, onCreateHelperFactory())
-            keyboardContainer.kelinIvKeyboardFolder.setOnClickListener { hiddenKeyboard() }
+        post {
+            if (editType != EDIT_TYPE_NULL) {
+                helper = KeyboardHelper.init(context as Activity, this, onCreateHelperFactory())
+                keyboardContainer.kelinIvKeyboardFolder.setOnClickListener { hiddenKeyboard() }
+            }
         }
     }
 
