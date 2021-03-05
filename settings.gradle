@@ -1,0 +1,3 @@
+include ':okkeyboard'
+include ':app'
+rootProject.name = "OkKeyboard"

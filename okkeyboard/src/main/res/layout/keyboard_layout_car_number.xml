@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_keyboard_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/kelinTvKeyboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/ic_car_number"
+            app:drawableLeftCompat="@drawable/ic_car_number"
+            android:text="@string/license_plate_keyboard"
+            android:drawablePadding="5dp"
+            android:textColor="#FFF"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/kelinIvKeyboardFolder"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_keyboard_fold" />
+    </RelativeLayout>
+
+    <com.kelin.okkeyboard.OkKeyboardView
+        android:id="@+id/kelinKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keyBackground="@drawable/bg_keyboard_key"
+        android:keyPreviewHeight="45dp"
+        android:keyPreviewLayout="@layout/keyboard_preview_layout"
+        android:keyTextColor="#000"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:shadowRadius="0"/>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KeyboardEditText">
+        <attr name="android:focusableInTouchMode" />
+        <!--设置根布局组件id-->
+        <attr name="rootView" format="reference" />
+        <!--编辑类型-->
+        <attr name="editType" format="enum" >
+            <!--车牌号-->
+            <enum name="licensePlate" value="0x01" />
+            <!--数字键盘-->
+            <enum name="number" value="0x02" />
+            <!--数字键盘(可输入小数)-->
+            <enum name="numberDecimals" value="0x03" />
+            <!--身份证号-->
+            <enum name="idCard" value="0x04" />
+        </attr>
+    </declare-styleable>
+</resources>

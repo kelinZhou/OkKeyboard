@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_key_text">#FFFFFF</color>
+    <color name="color_key_text_special">#FFFFFF</color>
+    <color name="color_key_text_disabled">#666666</color>
+    <color name="color_keyboard_bg">#212121</color>
+    <color name="color_key_disable">#474749</color>
+    <color name="color_key_stroke">#474749</color>
+    <color name="color_key_stroke_pressed">#303032</color>
+    <color name="color_key_stroke_disabled">#A7B0B5</color>
+    <color name="color_key_stroke_special">#1D7ACC</color>
+    <color name="color_key_stroke_special_pressed">#2497FB</color>
+    <color name="color_key_button">#474749</color>
+    <color name="color_key_button_pressed">#303032</color>
+    <color name="color_key_button_disabled">#474749</color>
+    <color name="color_key_button_special">#1D7ACC</color>
+    <color name="color_key_button_special_pressed">#2497FB</color>
+</resources>

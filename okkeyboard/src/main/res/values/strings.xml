@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="license_plate_keyboard">车牌号键盘</string>
+    <string name="number_keyboard">数字键盘</string>
+    <string name="number_decimals_keyboard">小数键盘</string>
+    <string name="id_card_keyboard">身份证键盘</string>
+</resources>
