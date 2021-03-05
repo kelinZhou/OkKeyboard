@@ -14,16 +14,16 @@
             android:id="@+id/kelinTvKeyboardTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:drawableStartCompat="@drawable/ic_car_number"
-            app:drawableLeftCompat="@drawable/ic_car_number"
+            android:drawableStart="@drawable/ic_car_number"
             android:text="@string/license_plate_keyboard"
             android:drawablePadding="5dp"
             android:textColor="#FFF"
             android:layout_centerInParent="true"
             android:textSize="16sp"
-            tools:ignore="RelativeOverlap" />
+            tools:ignore="RelativeOverlap"
+            android:drawableLeft="@drawable/ic_car_number" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <android.support.v7.widget.AppCompatImageView
             android:id="@+id/kelinIvKeyboardFolder"
             android:layout_width="46dp"
             android:layout_height="46dp"

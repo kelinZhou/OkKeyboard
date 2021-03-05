@@ -7,9 +7,9 @@ import android.graphics.Rect
 import android.graphics.Typeface
 import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
+import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.util.TypedValue
-import androidx.core.content.ContextCompat
 
 
 /**

@@ -2,9 +2,9 @@ package com.kelin.okkeyboard
 
 import android.content.Context
 import android.inputmethodservice.Keyboard
+import android.support.annotation.XmlRes
 import android.text.Editable
 import android.text.Selection
-import androidx.annotation.XmlRes
 
 /**
  * **描述:** 键盘处理的基本实现。

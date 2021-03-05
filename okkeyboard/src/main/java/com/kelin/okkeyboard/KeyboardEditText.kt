@@ -2,12 +2,12 @@ package com.kelin.okkeyboard
 
 import android.app.Activity
 import android.content.Context
+import android.support.annotation.IdRes
+import android.support.v4.view.ScrollingView
+import android.support.v7.widget.AppCompatEditText
 import android.util.AttributeSet
 import android.view.*
 import android.widget.*
-import androidx.annotation.IdRes
-import androidx.appcompat.widget.AppCompatEditText
-import androidx.core.view.ScrollingView
 import com.kelin.okkeyboard.handlers.CarKeyboardHandler
 import com.kelin.okkeyboard.handlers.IdCardKeyboardHandler
 import com.kelin.okkeyboard.handlers.NumberKeyboardHandler
@@ -72,7 +72,7 @@ class KeyboardEditText @JvmOverloads constructor(context: Context, attrs: Attrib
     }
 
     private val keyboardContainer by lazy {
-        val root = ((context as Activity).findViewById(rootViewId) ?: rootView as? ViewGroup ?: context.window.decorView as ViewGroup).let {
+        val root = ((context as android.support.v7.app.AppCompatActivity).findViewById(rootViewId) ?: rootView as? ViewGroup ?: context.window.decorView as ViewGroup).let {
             if (it is ScrollView || it is AbsListView || it is ScrollingView) {
                 it.parent as ViewGroup
             } else {

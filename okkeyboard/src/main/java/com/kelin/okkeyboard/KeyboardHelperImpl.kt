@@ -2,6 +2,7 @@ package com.kelin.okkeyboard
 
 import android.annotation.SuppressLint
 import android.inputmethodservice.KeyboardView
+import android.support.v4.content.ContextCompat
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.accessibility.AccessibilityEvent
@@ -9,7 +10,6 @@ import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import androidx.core.content.ContextCompat
 
 
 /**

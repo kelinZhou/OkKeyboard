@@ -2,10 +2,10 @@ package com.kelin.okkeyboard
 
 import android.app.Activity
 import android.os.Build
+import android.support.v4.content.ContextCompat
 import android.text.InputType
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import androidx.core.content.ContextCompat
 
 
 /**

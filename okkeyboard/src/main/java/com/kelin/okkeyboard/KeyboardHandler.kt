@@ -2,8 +2,8 @@ package com.kelin.okkeyboard
 
 import android.content.Context
 import android.inputmethodservice.Keyboard
+import android.support.annotation.StringRes
 import android.text.Editable
-import androidx.annotation.StringRes
 
 /**
  * **描述:** 键盘提供者。
