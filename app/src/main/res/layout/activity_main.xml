@@ -1,89 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainRoot"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
-
-        <com.kelin.okkeyboard.KeyboardEditText
-            android:id="@+id/etTest"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#EEE"
-            android:gravity="center|start"
-            android:hint="请输入内容"
-            android:layout_marginTop="80dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="26sp" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
 
-        <com.kelin.okkeyboard.KeyboardEditText
-            android:id="@+id/etCarNumber"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="#EEE"
-            android:gravity="center|start"
-            android:hint="请输入车牌号"
-            app:editType="licensePlate"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="26sp" />
+            <com.kelin.okkeyboard.KeyboardEditText
+                android:id="@+id/etTest"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#EEE"
+                android:gravity="center|start"
+                android:hint="请输入内容"
+                android:layout_marginTop="80dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="26sp" />
 
-        <com.kelin.okkeyboard.KeyboardEditText
-            android:id="@+id/etIdCard"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="#EEE"
-            android:gravity="center|start"
-            android:hint="请输身份证号"
-            app:editType="idCard"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="26sp" />
+            <com.kelin.okkeyboard.KeyboardEditText
+                android:id="@+id/etCarNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="#EEE"
+                android:gravity="center|start"
+                android:hint="请输入车牌号"
+                app:editType="licensePlate"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="26sp" />
 
-        <com.kelin.okkeyboard.KeyboardEditText
-            android:id="@+id/etNumber"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="#EEE"
-            android:gravity="center|start"
-            android:hint="请输入整数"
-            app:editType="number"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="26sp" />
+            <com.kelin.okkeyboard.KeyboardEditText
+                android:id="@+id/etIdCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="#EEE"
+                android:gravity="center|start"
+                android:hint="请输身份证号"
+                app:editType="idCard"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="26sp" />
 
-        <com.kelin.okkeyboard.KeyboardEditText
-            android:id="@+id/etNumberDecimals"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="#EEE"
-            android:gravity="center|start"
-            android:hint="请输入小数"
-            app:editType="numberDecimals"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="26sp" />
+            <com.kelin.okkeyboard.KeyboardEditText
+                android:id="@+id/etNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="#EEE"
+                android:gravity="center|start"
+                android:hint="请输入整数"
+                app:editType="number"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="26sp" />
 
-        <com.kelin.okkeyboard.KeyboardEditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="#EEE"
-            android:gravity="center|start"
-            android:hint="请输入内容"
-            android:layout_marginBottom="30dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="26sp" />
-    </LinearLayout>
-</ScrollView>
+            <com.kelin.okkeyboard.KeyboardEditText
+                android:id="@+id/etNumberDecimals"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="#EEE"
+                android:gravity="center|start"
+                android:hint="请输入小数"
+                app:rootView="@id/mainRoot"
+                app:editType="numberDecimals"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="26sp" />
+
+            <com.kelin.okkeyboard.KeyboardEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="#EEE"
+                android:gravity="center|start"
+                android:hint="请输入内容"
+                android:layout_marginBottom="30dp"
+                app:editType="licensePlate"
+                app:rootView="@id/mainRoot"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="26sp" />
+
+            <com.kelin.okkeyboard.KeyboardEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="#EEE"
+                android:gravity="center|start"
+                android:hint="请输入内容"
+                android:layout_marginBottom="30dp"
+                app:editType="idCard"
+                app:rootView="@id/mainRoot"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="26sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -94,7 +94,6 @@ class KeyboardEditText @JvmOverloads constructor(context: Context, attrs: Attrib
                     })
                 }
                 is LinearLayout -> {
-                    root.addView(View(context), LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1F))
                     root.addView(it)
                 }
                 else -> {
